@@ -1,0 +1,13 @@
+abstract: Encode the value automatically using HTML::Entities
+author: Hironori Yoshida, C<< <yoshida@cpan.org> >>
+distribution_type: module
+generated_by: Module::Install version 0.63
+license: perl
+name: Template-Stash-HTML-Entities
+no_index: 
+  directory: 
+    - inc
+    - t
+requires: 
+  HTML::Entities: 0
+version: 0.01
