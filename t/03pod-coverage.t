@@ -1,14 +1,14 @@
 #!/usr/bin/env perl
 #
-# $Revision: 1.1 $
+# $Revision: 1.2 $
 # $Source: /home/cvs/Template-Stash-HTML-Entities/t/03pod-coverage.t,v $
-# $Date: 2006/06/18 19:34:22 $
+# $Date: 2006/06/21 20:42:32 $
 #
 use strict;
 use warnings;
-our $VERSION = '0.01';
+use version;
+our $VERSION = version->new(qw$Revision: 1.2 $);
 
-use blib;
 use English qw(-no_match_vars);
 use Test::More;
 
@@ -18,11 +18,11 @@ if ( $ENV{TEST_POD} || $ENV{TEST_ALL} ) {
         Test::Pod::Coverage->import;
     };
     if ($EVAL_ERROR) {
-        plan skip_all => 'Test::Pod::Coverage required to enable this test';
+        plan skip_all => 'Test::Pod::Coverage required for testing POD coverage';
     }
 }
 else {
-    plan skip_all => 'set TEST_POD to enable this test';
+    plan skip_all => 'set TEST_POD for testing POD coverage';
 }
 
 all_pod_coverage_ok();

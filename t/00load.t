@@ -1,12 +1,13 @@
 #!/usr/bin/env perl
 #
 # $Revision: 1.1 $
-# $Source: /home/cvs/Template-Stash-HTML-Entities/t/01load.t,v $
-# $Date: 2006/06/18 19:34:22 $
+# $Source: /home/cvs/Template-Stash-HTML-Entities/t/00load.t,v $
+# $Date: 2006/06/21 20:42:31 $
 #
 use strict;
 use warnings;
-our $VERSION = '0.01';
+use version;
+our $VERSION = version->new(qw$Revision: 1.1 $);
 
 use blib;
 use English qw(-no_match_vars);
@@ -22,11 +23,11 @@ BEGIN {
         };
         if ($EVAL_ERROR) {
             $WHY_SKIP_SAWAMPERSAND =
-              'Devel::SawAmpersand required to enable this test';
+              'Devel::SawAmpersand required for testing sawampersand';
         }
     }
     else {
-        $WHY_SKIP_SAWAMPERSAND = 'set TEST_MATCH_VARS to enable this test';
+        $WHY_SKIP_SAWAMPERSAND = 'set TEST_MATCH_VARS for testing sawampersand';
     }
 
     use_ok('Template::Stash::HTML::Entities');

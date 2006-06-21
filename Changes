@@ -2,5 +2,9 @@
 Revision history for Template-Stash-HTML-Entities
 =================================================
 
+0.02    2006/06/21
+    - use version module
+    - document fix
+
 0.01    2006/06/18
-    - first developer release.
+    - first developer release

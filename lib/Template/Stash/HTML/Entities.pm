@@ -1,12 +1,13 @@
 #
-# $Revision: 1.1 $
+# $Revision: 1.3 $
 # $Source: /home/cvs/Template-Stash-HTML-Entities/lib/Template/Stash/HTML/Entities.pm,v $
-# $Date: 2006/06/18 19:34:20 $
+# $Date: 2006/06/21 20:42:29 $
 #
 package Template::Stash::HTML::Entities;
 use strict;
 use warnings;
-our $VERSION = '0.01';
+use version;
+our $VERSION = version->new(qw$Revision: 1.3 $);
 
 use HTML::Entities;
 use Template::Config;
@@ -34,7 +35,7 @@ Template::Stash::HTML::Entities - Encode the value automatically using HTML::Ent
 
 =head1 VERSION
 
-0.01
+This document describes Template::Stash::HTML::Entities $Revision: 1.3 $
 
 =head1 SYNOPSIS
 
@@ -57,7 +58,7 @@ you should decode it explicitly.
 
 =head1 SUBROUTINES/METHODS
 
-=head2 get
+=head2 get(@)
 
 When the value is not a reference, it returns the encoded value.
 
@@ -65,13 +66,19 @@ When the value is not a reference, it returns the encoded value.
 
 =head1 CONFIGURATION AND ENVIRONMENT
 
+Template::Stash::HTML::Entities requires no configuration files or environment variables.
+
 =head1 DEPENDENCIES
 
 L<Template::Stash>, L<HTML::Entities>
 
 =head1 INCOMPATIBILITIES
 
+None reported.
+
 =head1 BUGS AND LIMITATIONS
+
+No bugs have been reported.
 
 Please report any bugs or feature requests to
 C<bug-template-stash-html-entities@rt.cpan.org>, or through the web interface at
@@ -79,41 +86,15 @@ L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Template-Stash-HTML-Entities>.
 I will be notified, and then you'll automatically be notified of progress on
 your bug as I make changes.
 
-You can find documentation for this module with the perldoc command.
-
-    perldoc Template::Stash::HTML::Entities
-
-You can also look for information at:
-
-=over 4
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Template-Stash-HTML-Entities>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Template-Stash-HTML-Entities>
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Template-Stash-HTML-Entities>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/Template-Stash-HTML-Entities>
-
-=back
-
 =head1 AUTHOR
 
-Hironori Yoshida, C<< <yoshida@cpan.org> >>
+Hironori Yoshida  C<< <yoshida@cpan.org> >>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2006 Hironori Yoshida, all rights reserved.
+Copyright (c) 2006, Hironori Yoshida C<< <yoshida@cpan.org> >>. All rights reserved.
 
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+This module is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself. See L<perlartistic>.
 
 =cut
