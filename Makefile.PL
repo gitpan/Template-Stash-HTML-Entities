@@ -1,15 +1,10 @@
-#!/usr/bin/env perl
 #
-# $Revision: 1.4 $
-# $Source: /home/cvs/Template-Stash-HTML-Entities/Makefile.PL,v $
-# $Date: 2006/06/21 20:42:21 $
+# $Id: Makefile.PL,v 1.6 2007/05/04 08:02:57 hironori.yoshida Exp $
 #
+package main;
 use strict;
 use warnings;
-our $VERSION = eval {
-    require version;
-    version->new(qw$Revision: 1.4 $);
-};
+our $VERSION = eval { require version; version::qv('1.3.1') };
 
 use inc::Module::Install;
 eval {
@@ -18,7 +13,8 @@ eval {
 };
 
 name 'Template-Stash-HTML-Entities';
-version '0.02';
+version "$VERSION";
+perl_version '5.006';
 all_from 'lib/Template/Stash/HTML/Entities.pm';
 
 requires 'version'          => 0;
@@ -26,3 +22,5 @@ requires 'HTML::Entities'   => 0;
 requires 'Template::Config' => 0;
 
 WriteAll;
+
+1;

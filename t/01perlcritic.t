@@ -1,19 +1,16 @@
 #!/usr/bin/env perl
 #
-# $Revision: 1.1 $
-# $Source: /home/cvs/Template-Stash-HTML-Entities/t/01perlcritic.t,v $
-# $Date: 2006/06/21 20:42:31 $
+# $Id: 01perlcritic.t,v 1.2 2007/05/04 07:33:33 hironori.yoshida Exp $
 #
 use strict;
 use warnings;
-use version;
-our $VERSION = version->new(qw$Revision: 1.1 $);
+use version; our $VERSION = qv('1.3.1');
 
 use blib;
 use English qw(-no_match_vars);
 use Test::More;
 
-if ( $ENV{TEST_CRITIC} || $ENV{TEST_ALL} ) {
+if ( $ENV{TEST_CRITIC} || $ENV{TEST_ALL} || !$ENV{HARNESS_ACTIVE} ) {
     eval {
         my $format = "%l: %m (severity %s)\n";
         if ( $ENV{TEST_VERBOSE} ) {

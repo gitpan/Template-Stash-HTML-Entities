@@ -1,13 +1,11 @@
 #
-# $Revision: 1.3 $
-# $Source: /home/cvs/Template-Stash-HTML-Entities/lib/Template/Stash/HTML/Entities.pm,v $
-# $Date: 2006/06/21 20:42:29 $
+# $Id: Entities.pm,v 1.5 2007/05/04 08:02:58 hironori.yoshida Exp $
 #
 package Template::Stash::HTML::Entities;
+
 use strict;
 use warnings;
-use version;
-our $VERSION = version->new(qw$Revision: 1.3 $);
+use version; our $VERSION = qv('1.3.1');
 
 use HTML::Entities;
 use Template::Config;
@@ -35,7 +33,7 @@ Template::Stash::HTML::Entities - Encode the value automatically using HTML::Ent
 
 =head1 VERSION
 
-This document describes Template::Stash::HTML::Entities $Revision: 1.3 $
+This document describes Template::Stash::HTML::Entities version 1.3.1
 
 =head1 SYNOPSIS
 
@@ -88,11 +86,11 @@ your bug as I make changes.
 
 =head1 AUTHOR
 
-Hironori Yoshida  C<< <yoshida@cpan.org> >>
+Hironori Yoshida C<< <yoshida@cpan.org> >>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (c) 2006, Hironori Yoshida C<< <yoshida@cpan.org> >>. All rights reserved.
+Copyright (c) 2006-2007, Hironori Yoshida C<< <yoshida@cpan.org> >>. All rights reserved.
 
 This module is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself. See L<perlartistic>.
